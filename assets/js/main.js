@@ -53,4 +53,21 @@
       el.classList.add('visible');
     });
   }
+  // ── Accordion ──
+  document.querySelectorAll('.accordion-trigger').forEach(function (trigger) {
+    trigger.addEventListener('click', function () {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      // Close all
+      document.querySelectorAll('.accordion-trigger').forEach(function (t) {
+        t.setAttribute('aria-expanded', 'false');
+        t.nextElementSibling.classList.remove('open');
+      });
+      // Open this one if it was closed
+      if (!expanded) {
+        this.setAttribute('aria-expanded', 'true');
+        this.nextElementSibling.classList.add('open');
+      }
+    });
+  });
+
 })();
