@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Berkeley Budget Discipline Framework</title>
+  <meta name="description" content="A proposal for disciplined, transparent municipal budgeting in Berkeley. A budget is not a list of good things — it is a ranking.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav class="site-nav" aria-label="Site navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">Berkeley Budget Lab</a>
+    <button class="nav-hamburger" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="framework.html">Framework</a></li>
+      <li><a href="endorse.html">Endorse</a></li>
+      <li><a href="endorsers.html">Endorsers</a></li>
+      <li><a href="toolbox.html">Toolbox</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#downloads">Downloads</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+  <!-- Scene 1: Hero -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <h1 id="hero-heading">A Popularity Contest Is Not a Budget</h1>
+    <p class="subtitle">Berkeley needs a disciplined way to decide what comes first.</p>
+    <div class="hero-buttons">
+      <a href="endorse.html" class="btn btn-primary">Endorse the Framework</a>
+      <a href="assets/downloads/bbdf-one-page.pdf" class="btn btn-outline" download>Download One-Page Framework</a>
+    </div>
+  </section>
+
+  <!-- Scene 2: Fiscal Reality -->
+  <section class="scene bg-gray fade-in" aria-labelledby="fiscal-heading">
+    <div class="scene-wide">
+      <h2 id="fiscal-heading" class="text-center mb-2">Berkeley Is Facing a Fiscal Reality</h2>
+      <div class="card-grid">
+        <div class="stat-card">
+          <div class="stat-icon" aria-hidden="true">
+            <!-- expenses (red) rise faster than revenues (green) -->
+            <svg width="48" height="36" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Chart showing expenses rising faster than revenues">
+              <line x1="2" y1="34" x2="46" y2="34" stroke="#ccc" stroke-width="1"/>
+              <!-- Revenue line: gentle slope upward -->
+              <polyline points="2,30 16,24 30,20 46,16" stroke="#2e6b3e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <!-- Expenses line: steeper slope, crosses above revenue -->
+              <polyline points="2,28 16,20 30,10 46,4" stroke="#c0392b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <!-- Labels -->
+              <text x="38" y="14" font-size="7" fill="#c0392b" font-family="sans-serif">exp</text>
+              <text x="38" y="20" font-size="7" fill="#2e6b3e" font-family="sans-serif">rev</text>
+            </svg>
+          </div>
+          <div>
+            <h3>Persistent Structural Deficit</h3>
+            <p>Ongoing expenses outpace revenues in the base budget, year after year.</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🏦</div>
+          <div>
+            <h3>Hundreds of Millions in Unfunded Liabilities</h3>
+            <p>Pension and retiree healthcare obligations compete with every new dollar spent.</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🔧</div>
+          <div>
+            <h3>Deferred Infrastructure and Maintenance</h3>
+            <p>Roads, facilities, and systems deferred today cost far more tomorrow.</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🪙</div>
+          <div>
+            <h3>New Taxes to Sustain Services</h3>
+            <p>Berkeley looks to voters for additional revenue to maintain current service levels.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scene 3: Budgets Are Rankings -->
+  <section class="scene bg-white text-center fade-in" aria-labelledby="rankings-heading">
+    <div class="scene-narrow">
+      <h2 id="rankings-heading">A Budget Is Not a List of Good Things</h2>
+      <p class="pull-quote">It is a ranking.</p>
+      <p class="pull-quote-sub">Every dollar spent on one thing is a dollar not spent on something else. Scarcity is not a failure of will — it is the condition that makes priorities necessary.</p>
+    </div>
+  </section>
+
+  <!-- Scene 4: Current Failure Mode -->
+  <section class="scene fade-in" style="background:#1a0a0a;" aria-labelledby="failure-heading">
+    <div class="scene-wide">
+      <div class="text-center mb-2">
+        <div class="badge" style="background:var(--red);color:var(--white);">Visibility ≠ Priority</div>
+        <h2 id="failure-heading" style="color:#f5a9a9;">The Current Process Rewards Visibility, Not Priority</h2>
+        <p style="color:rgba(255,180,180,0.75);max-width:60ch;margin:1rem auto 2rem;">Organized constituencies and historical precedent should not replace transparent prioritization.</p>
+      </div>
+      <div class="failure-grid">
+        <div class="failure-item">
+          <div class="failure-x" aria-hidden="true">✕</div>
+          <h3>Organized Constituencies Win</h3>
+          <p>Programs with vocal advocates receive funding regardless of relative priority.</p>
+        </div>
+        <div class="failure-item">
+          <div class="failure-x" aria-hidden="true">✕</div>
+          <h3>Programs Funded Without Clear Outcomes</h3>
+          <p>Once funded, programs rarely face rigorous evaluation or sunset review.</p>
+        </div>
+        <div class="failure-item">
+          <div class="failure-x" aria-hidden="true">✕</div>
+          <h3>Outside Money Without Full-Cost Accounting</h3>
+          <p>Grants and external funds are accepted without weighing Berkeley's long-term obligations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scene 5: Six Tests -->
+  <section class="scene bg-gray fade-in" aria-labelledby="six-tests-heading">
+    <div class="scene-wide">
+      <h2 id="six-tests-heading" class="text-center mb-2">Six Questions Every Dollar Must Answer</h2>
+      <p class="text-center text-muted" style="max-width:60ch;margin:0 auto 2.5rem;">Every program that wants public funding should earn its place. The framework asks these six questions of every budget proposal.</p>
+      <div class="card-grid card-grid-3">
+
+        <article class="card fade-in">
+          <div class="card-number">1</div>
+          <h3>Is This a Core City Responsibility?</h3>
+          <p>Distinguish what the city <em>must</em> do from what it has <em>chosen</em> to do. Public safety and infrastructure are obligations. Arts support is a choice. Choices face a higher burden of proof when competing with obligations.</p>
+          <div class="example">Example test: Is this something Berkeley must provide, or something Berkeley has chosen to provide?</div>
+        </article>
+
+        <article class="card fade-in">
+          <div class="card-number">2</div>
+          <h3>Is It More Important Than Competing Needs?</h3>
+          <p>Every dollar has an opportunity cost. What are we not doing to pay for this?</p>
+          <div class="example">Example test: What would we have to cut or delay to pay for this?</div>
+        </article>
+
+        <article class="card fade-in">
+          <div class="card-number">3</div>
+          <h3>Does It Work — and How Would We Know?</h3>
+          <p>Good intentions aren't enough. Expect measurable results and regular, honest evaluation.</p>
+          <div class="example">Example test: What is the outcome? How will we measure it?</div>
+        </article>
+
+        <article class="card fade-in">
+          <div class="card-number">4</div>
+          <h3>Does Outside Funding Actually Reduce Our Burden?</h3>
+          <p>Free money isn't free if it creates ongoing costs, obligations, service-level effects, or harder exit costs.</p>
+          <div class="example">Example test: Will this leave Berkeley owning the problem long-term?</div>
+        </article>
+
+        <article class="card fade-in">
+          <div class="card-number">5</div>
+          <h3>Who Else Should Be Solving or Sharing This?</h3>
+          <p>If a need is regional or shared, the solution and the cost should be shared too — not borne by Berkeley alone.</p>
+          <div class="example">Example test: Is Berkeley solving a regional problem with local dollars?</div>
+        </article>
+
+        <article class="card fade-in">
+          <div class="card-number">6</div>
+          <h3>When Do We Stop, Shrink, or Redesign It?</h3>
+          <p>Funding something once should not create a permanent entitlement. Every program needs a sunset or renewal process.</p>
+          <div class="example">Example test: What's the exit date? What causes us to scale back?</div>
+        </article>
+
+      </div>
+      <div class="text-center mt-3">
+        <a href="framework.html" class="btn btn-navy">Read the Full Framework →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scene 6: Outside Funding -->
+  <section class="scene bg-white fade-in" aria-labelledby="outside-funding-heading">
+    <div class="scene-narrow text-center">
+      <h2 id="outside-funding-heading" style="font-size:clamp(1.6rem,4vw,2.75rem);max-width:20ch;margin:0 auto 2rem;">
+        Free money is not free if Berkeley owns the consequences.
+      </h2>
+      <div class="card-grid card-grid-3" style="text-align:left;">
+        <div class="card">
+          <h3>Ongoing Costs</h3>
+          <p>Grants end. Staff, programs, and facilities funded by outside money often remain — paid for by Berkeley.</p>
+        </div>
+        <div class="card">
+          <h3>Service-Level Obligations</h3>
+          <p>Accepting a grant may create legal or community expectations that outlast the funding itself.</p>
+        </div>
+        <div class="card">
+          <h3>Harder Exit Costs</h3>
+          <p>Winding down a funded program is often more expensive — politically and financially — than never starting it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scene 7: Sunset Review -->
+  <section class="scene bg-navy fade-in" aria-labelledby="sunset-heading">
+    <div class="scene-narrow text-center">
+      <h2 id="sunset-heading" style="color:var(--white)">Funding Once Is Not a Lifetime Appointment.</h2>
+      <p style="color:rgba(255,255,255,0.8);margin:1rem auto 0;max-width:55ch;">Every program should have a renewal process: measured, compared, and decided on the evidence.</p>
+      <div class="flow-diagram" role="img" aria-label="Sunset review cycle: Fund, then Measure, then Compare, then Continue, Change, or End">
+        <div class="flow-step"><strong>Fund</strong></div>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <div class="flow-step"><strong>Measure</strong></div>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <div class="flow-step"><strong>Compare</strong></div>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <div class="flow-end">
+          <div class="flow-step"><strong>Continue</strong></div>
+          <div class="flow-step"><strong>Change</strong></div>
+          <div class="flow-step"><strong>End</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scene 8: Before / After -->
+  <section class="scene bg-gray fade-in" aria-labelledby="before-after-heading">
+    <div class="scene-wide">
+      <h2 id="before-after-heading" class="text-center mb-2">A Framework Changes the Conversation</h2>
+      <div class="before-after">
+        <div class="before-col">
+          <h3>Before: What Drives Decisions</h3>
+          <ul>
+            <li>Precedent</li>
+            <li>Political pressure</li>
+            <li>Inertia</li>
+            <li>One-time fixes</li>
+          </ul>
+        </div>
+        <div class="after-col">
+          <h3>After: What Should Drive Decisions</h3>
+          <ul>
+            <li>Stated priorities</li>
+            <li>Evidence of effectiveness</li>
+            <li>Full lifecycle costs</li>
+            <li>Transparency</li>
+            <li>Sunset review</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scene 9: Philosophy -->
+  <section class="scene bg-white fade-in" aria-labelledby="philosophy-heading">
+    <div class="scene-narrow text-center">
+      <h2 id="philosophy-heading" class="text-muted" style="font-size:1rem;text-transform:uppercase;letter-spacing:0.1em;font-family:var(--font-sans);margin-bottom:2rem;">Statement of Philosophy</h2>
+      <blockquote style="border:none;padding:0;text-align:center;font-size:clamp(1.15rem,2.5vw,1.65rem);line-height:1.5;max-width:70ch;margin:0 auto 1.5rem;">
+        The purpose of this framework is not to predetermine winners and losers. Its purpose is to ensure every proposal is evaluated using the same transparent standards.
+      </blockquote>
+      <p class="pull-quote-sub">Reasonable people can disagree about individual budget decisions while agreeing that every public dollar deserves the same careful review.</p>
+    </div>
+  </section>
+
+  <!-- Scene 10: Endorse -->
+  <section class="scene bg-gold fade-in" aria-labelledby="endorse-heading">
+    <div class="scene-narrow text-center">
+      <h2 id="endorse-heading">Endorse the Berkeley Budget Discipline Framework</h2>
+      <div class="disclaimer-box" style="margin:1.5rem auto;background:rgba(255,255,255,0.55);">
+        <p>By endorsing this framework you are supporting the decision-making framework — not every future application of it. Different people may reasonably reach different conclusions when applying these principles to individual budget decisions.</p>
+      </div>
+      <a href="endorse.html" class="btn btn-navy">Add Your Name →</a>
+    </div>
+  </section>
+
+  <!-- Scene 11: Budget Toolbox Preview -->
+  <section class="scene bg-gray fade-in" aria-labelledby="toolbox-preview-heading">
+    <div class="scene-wide">
+      <h2 id="toolbox-preview-heading" class="text-center mb-1">Better Budgeting Requires Better Information</h2>
+      <p class="text-center text-muted" style="max-width:55ch;margin:0 auto 2.5rem;">Tools developed for this project and by community members to improve public understanding of Berkeley's finances.</p>
+      <div class="card-grid card-grid-3">
+        <div class="tool-card">
+          <h3>Berkeley Budget Lab</h3>
+          <p class="tool-purpose">Interactive Tool</p>
+          <p>Try to close Berkeley's budget gap yourself. Decide what is a priority and see the real tradeoffs.</p>
+          <a href="https://ericdf.github.io/budget_lab/" class="btn btn-primary" style="margin-top:1rem;font-size:0.875rem;display:inline-block;" target="_blank" rel="noopener">Try it →</a>
+        </div>
+        <div class="tool-card">
+          <h3>Berkeley Tax Bundle Calculator</h3>
+          <p class="tool-purpose">Interactive Tool</p>
+          <p>At-a-glance visibility into how proposed taxes will affect <em>your</em> household. See the full bundle, not just one measure at a time.</p>
+          <a href="https://ericdf.github.io/berkeley-tax-explorer/" class="btn btn-primary" style="margin-top:1rem;font-size:0.875rem;display:inline-block;" target="_blank" rel="noopener">Try it →</a>
+        </div>
+        <div class="tool-card">
+          <h3>External Resources</h3>
+          <p class="tool-purpose">Third-Party</p>
+          <p>Budget explorers, pension dashboards, capital project trackers, and nonprofit datasets.</p>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <a href="toolbox.html" class="btn btn-navy">Visit the Toolbox →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Downloads anchor -->
+<div id="downloads" style="background:var(--navy);padding:3rem 1.5rem;">
+  <div style="max-width:800px;margin:0 auto;text-align:center;">
+    <h2 style="color:var(--gold);margin-bottom:1rem;">Downloads</h2>
+    <p style="color:rgba(255,255,255,0.8);margin:0 auto 2rem;max-width:50ch;">Download the framework for sharing, presentation, or offline reference.</p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+      <a href="assets/downloads/bbdf-one-page.pdf" class="btn btn-primary" download>One-Page Framework</a>
+      <a href="assets/downloads/bbdf-full-framework.pdf" class="btn btn-outline" download>Full Framework (PDF)</a>
+      <a href="assets/downloads/bbdf-presentation.pdf" class="btn btn-outline" download>Presentation Deck</a>
+    </div>
+    <p style="margin-top:1.5rem;color:rgba(255,255,255,0.5);font-size:0.875rem;">
+      One-page framework also available as a poster: <a href="assets/img/poster.png" style="color:var(--gold);" target="_blank">View poster →</a>
+    </p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Berkeley Budget Lab</div>
+      <div class="footer-version">Berkeley Budget Discipline Framework v1.1</div>
+      <p class="footer-disclaimer">This framework promotes a disciplined decision-making process for municipal budgeting. It does not advocate predetermined budget outcomes. Reasonable people can disagree about individual decisions while agreeing on the process.</p>
+    </div>
+    <div class="footer-downloads">
+      <h4>Downloads</h4>
+      <a href="assets/downloads/bbdf-one-page.pdf" download>One-Page Framework</a>
+      <a href="assets/downloads/bbdf-full-framework.pdf" download>Full Framework</a>
+      <a href="assets/downloads/bbdf-presentation.pdf" download>Presentation Deck</a>
+      <a href="assets/img/poster.png" target="_blank">Poster (PNG)</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
