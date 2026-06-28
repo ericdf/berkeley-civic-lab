@@ -272,6 +272,9 @@ a:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
 .failure-item h3 { color: #f5a9a9; font-size: 1rem; margin-bottom: 0.5rem; }
 .failure-item p { color: rgba(255,200,200,0.7); font-size: 0.9rem; max-width: none; }
 
+/* ── EDITORIAL ── */
+.sic { font-style: italic; color: var(--text-muted); font-size: 0.85em; }
+
 /* ── BADGES ── */
 .badge {
   display: inline-block;
