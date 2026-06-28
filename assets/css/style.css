@@ -729,47 +729,38 @@ blockquote cite {
 }
 .footer-downloads a:hover { color: var(--gold); }
 
-/* ── NO WAY TO RUN A CITY — scroll-driven sticky engine ── */
+/* ── NO WAY TO RUN A CITY — annotated document engine ── */
 
-.nwtrc-scroll-section {
-  position: relative;
+.nwtrc-section {
   background: var(--gray-bg);
-}
-
-.nwtrc-sticky-view {
-  position: sticky;
-  top: 56px;
-  height: calc(100vh - 56px);
-  overflow: hidden;
-  display: flex;
-  align-items: stretch;
+  padding: 2.5rem 1.5rem 3rem;
 }
 
 .nwtrc-two-col {
   display: grid;
   grid-template-columns: 1fr 340px;
   gap: 2rem;
-  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
-  box-sizing: border-box;
   align-items: start;
-  overflow: hidden;
 }
 
 .nwtrc-doc-col {
+  position: sticky;
+  top: 72px;
+  max-height: calc(100vh - 80px);
   overflow-y: auto;
-  max-height: calc(100vh - 56px - 4rem);
   padding-right: 0.5rem;
 }
 .nwtrc-doc-col::-webkit-scrollbar { width: 4px; }
 .nwtrc-doc-col::-webkit-scrollbar-thumb { background: var(--gray-mid); border-radius: 2px; }
 
 .nwtrc-panel-col {
+  position: sticky;
+  top: 72px;
+  max-height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
-  max-height: calc(100vh - 56px - 4rem);
 }
 
 .nwtrc-panel {
@@ -792,7 +783,7 @@ blockquote cite {
   height: 100%;
   background: var(--gold);
   width: 0%;
-  transition: width 0.3s ease;
+  transition: width 0.35s ease;
 }
 
 .nwtrc-card {
@@ -800,12 +791,12 @@ blockquote cite {
   padding: 1.5rem;
   overflow-y: auto;
   flex: 1;
-  animation: nwtrc-fade 0.25s ease;
+  animation: nwtrc-fade 0.2s ease;
 }
 .nwtrc-card.active { display: flex; flex-direction: column; }
 
 @keyframes nwtrc-fade {
-  from { opacity: 0; transform: translateY(6px); }
+  from { opacity: 0; transform: translateY(5px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
@@ -861,13 +852,38 @@ blockquote cite {
 
 .nwtrc-scroll-hint {
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
-  padding: 0.5rem 1.5rem 0.75rem;
+  padding: 0.4rem 1rem 0;
   font-family: var(--font-sans);
   border-top: 1px solid var(--gray-mid);
   flex-shrink: 0;
 }
+
+.nwtrc-nav {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--gray-mid);
+  flex-shrink: 0;
+  justify-content: space-between;
+}
+.nwtrc-btn {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-mid);
+  background: var(--white);
+  color: var(--navy);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+.nwtrc-btn:hover:not(:disabled) { background: var(--gray-bg); border-color: var(--navy); }
+.nwtrc-btn:disabled { opacity: 0.35; cursor: default; }
+.nwtrc-btn-primary { background: var(--navy); color: var(--white); border-color: var(--navy); }
+.nwtrc-btn-primary:hover:not(:disabled) { background: var(--navy-dark); border-color: var(--navy-dark); }
 
 /* Document styles */
 .doc-container {
@@ -902,14 +918,12 @@ blockquote cite {
 }
 
 .doc-phrase {
-  background: transparent;
-  transition: background 0.3s, color 0.3s;
   border-radius: 2px;
   padding: 1px 2px;
+  transition: background 0.3s;
 }
 .doc-phrase.active {
-  background: rgba(240, 200, 40, 0.45);
-  color: var(--navy);
+  background: rgba(240, 200, 40, 0.5);
 }
 
 .doc-p { margin-bottom: 1rem; max-width: none; }
@@ -933,11 +947,9 @@ blockquote cite {
 .unanswered-list li { margin-bottom: 0.25rem; }
 
 @media (max-width: 860px) {
-  .nwtrc-sticky-view { position: static; height: auto; overflow: visible; }
-  .nwtrc-two-col { grid-template-columns: 1fr; overflow: visible; }
-  .nwtrc-doc-col { overflow-y: visible; max-height: none; }
-  .nwtrc-panel-col { max-height: none; }
-  .nwtrc-panel { position: static; }
+  .nwtrc-two-col { grid-template-columns: 1fr; }
+  .nwtrc-doc-col { position: static; max-height: none; overflow-y: visible; }
+  .nwtrc-panel-col { position: static; max-height: none; }
   .doc-container { padding: 1.5rem; }
 }
 

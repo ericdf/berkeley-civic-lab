@@ -70,53 +70,52 @@
     });
   });
 
-  // ── Annotated Document Engine (scroll-driven sticky) ──
+  // ── Annotated Document Engine (prev/next) ──
   (function() {
-    var scrollSection = document.getElementById('nwtrc-scroll');
-    if (!scrollSection) return;
+    var section = document.getElementById('nwtrc-section');
+    if (!section) return;
 
-    var TOTAL = 22;
-    var STEP_HEIGHT = 180;
-    scrollSection.style.height = (TOTAL * STEP_HEIGHT + window.innerHeight) + 'px';
+    var TOTAL   = 22;
+    var current = 1;
 
-    var phrases  = document.querySelectorAll('.doc-phrase[data-passage]');
-    var cards    = document.querySelectorAll('.nwtrc-card[data-passage]');
-    var fill     = document.getElementById('nwtrc-progress');
-    var docCol   = document.querySelector('.nwtrc-doc-col');
-    var current  = null;
+    var phrases = document.querySelectorAll('.doc-phrase[data-passage]');
+    var cards   = document.querySelectorAll('.nwtrc-card[data-passage]');
+    var fill    = document.getElementById('nwtrc-progress');
+    var prevBtn = document.getElementById('nwtrc-prev');
+    var nextBtn = document.getElementById('nwtrc-next');
+    var docCol  = document.querySelector('.nwtrc-doc-col');
 
-    function activate(id) {
-      if (id === current) return;
-      current = id;
+    function activate(n) {
+      current = n;
+      var id = String(n);
 
       phrases.forEach(function(p) { p.classList.toggle('active', p.dataset.passage === id); });
-      cards.forEach(function(c) {
-        if (c.dataset.passage === id) { c.classList.add('active'); }
-        else { c.classList.remove('active'); }
-      });
+      cards.forEach(function(c) { c.classList.toggle('active', c.dataset.passage === id); });
 
-      if (fill) fill.style.width = (((parseInt(id) - 1) / (TOTAL - 1)) * 100) + '%';
+      if (fill) fill.style.width = ((n - 1) / (TOTAL - 1) * 100) + '%';
 
-      // Auto-scroll doc column to keep highlighted phrase in view
-      var targets = [];
-      phrases.forEach(function(p) { if (p.dataset.passage === id) targets.push(p); });
-      if (targets.length && docCol) {
-        var phrase = targets[0];
-        var phraseTop = phrase.getBoundingClientRect().top;
+      // Scroll doc column so active phrase is visible
+      var activePhrase = section.querySelector('.doc-phrase[data-passage="' + id + '"]');
+      if (activePhrase && docCol) {
+        var phraseTop = activePhrase.getBoundingClientRect().top;
         var colTop = docCol.getBoundingClientRect().top;
-        var offset = phraseTop - colTop + docCol.scrollTop - (docCol.clientHeight * 0.3);
-        docCol.scrollTo({ top: Math.max(0, offset), behavior: 'smooth' });
+        var target = docCol.scrollTop + (phraseTop - colTop) - (docCol.clientHeight * 0.35);
+        docCol.scrollTo({ top: Math.max(0, target), behavior: 'smooth' });
       }
+
+      if (prevBtn) prevBtn.disabled = (n <= 1);
+      if (nextBtn) nextBtn.disabled = (n >= TOTAL);
     }
 
-    window.addEventListener('scroll', function() {
-      var scrolled = -scrollSection.getBoundingClientRect().top;
-      if (scrolled < 0) scrolled = 0;
-      var idx = Math.min(Math.floor(scrolled / STEP_HEIGHT), TOTAL - 1);
-      activate(String(idx + 1));
-    }, { passive: true });
+    if (prevBtn) prevBtn.addEventListener('click', function() { if (current > 1) activate(current - 1); });
+    if (nextBtn) nextBtn.addEventListener('click', function() { if (current < TOTAL) activate(current + 1); });
 
-    activate('1');
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowRight' && current < TOTAL) activate(current + 1);
+      if (e.key === 'ArrowLeft'  && current > 1)     activate(current - 1);
+    });
+
+    activate(1);
   })();
 
 })();

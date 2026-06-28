@@ -58,9 +58,8 @@
   </section>
 
   <!-- ── Annotated Document ── -->
-  <div class="nwtrc-scroll-section" id="nwtrc-scroll">
-    <div class="nwtrc-sticky-view">
-      <div class="nwtrc-two-col">
+  <section class="nwtrc-section" id="nwtrc-section">
+    <div class="nwtrc-two-col">
 
       <!-- Left: Document -->
       <div class="nwtrc-doc-col">
@@ -535,12 +534,15 @@
           </div>
         </div>
 
-        <div class="nwtrc-scroll-hint">Scroll to advance the analysis ↓</div>
+        <div class="nwtrc-scroll-hint">Use Next to step through the analysis</div>
+        <div class="nwtrc-nav">
+          <button class="nwtrc-btn" id="nwtrc-prev" aria-label="Previous annotation" disabled>← Prev</button>
+          <button class="nwtrc-btn nwtrc-btn-primary" id="nwtrc-next" aria-label="Next annotation">Next →</button>
+        </div>
         </div><!-- /.nwtrc-panel -->
       </aside><!-- /.nwtrc-panel-col -->
     </div><!-- /.nwtrc-two-col -->
-    </div><!-- /.nwtrc-sticky-view -->
-  </div><!-- /.nwtrc-scroll-section -->
+  </section><!-- /.nwtrc-section -->
 
   <!-- ── Questions Still Unanswered ── -->
   <section class="scene bg-white" aria-labelledby="unanswered-heading">
