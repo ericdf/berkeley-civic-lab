@@ -825,11 +825,10 @@ blockquote cite {
   padding: 0.65rem 0.75rem;
 }
 .nwtrc-frame-panel.inside {
-  background: var(--navy);
+  background: var(--gold);
 }
 .nwtrc-frame-panel.outside {
-  background: var(--gray-bg);
-  border: 1px dashed #bbb;
+  background: var(--navy);
 }
 .nwtrc-frame-label {
   font-family: var(--font-sans);
@@ -840,8 +839,8 @@ blockquote cite {
   margin-bottom: 0.5rem;
   display: block;
 }
-.nwtrc-frame-panel.inside  .nwtrc-frame-label { color: rgba(255,255,255,0.55); }
-.nwtrc-frame-panel.outside .nwtrc-frame-label { color: var(--text-muted); }
+.nwtrc-frame-panel.inside  .nwtrc-frame-label { color: rgba(26,39,68,0.6); }
+.nwtrc-frame-panel.outside .nwtrc-frame-label { color: rgba(255,255,255,0.55); }
 .nwtrc-frame-chips {
   display: flex;
   flex-wrap: wrap;
@@ -850,20 +849,19 @@ blockquote cite {
 .nwtrc-frame-chip {
   font-family: var(--font-sans);
   font-size: 0.72rem;
-  font-weight: 500;
+  font-weight: 600;
   border-radius: 20px;
   padding: 0.2rem 0.55rem;
   line-height: 1.4;
   display: inline-block;
 }
 .nwtrc-frame-panel.inside  .nwtrc-frame-chip {
-  background: rgba(255,255,255,0.15);
-  color: var(--white);
+  background: rgba(26,39,68,0.12);
+  color: var(--navy);
 }
 .nwtrc-frame-panel.outside .nwtrc-frame-chip {
-  background: var(--white);
-  color: var(--text-muted);
-  border: 1px dashed #bbb;
+  background: rgba(255,255,255,0.1);
+  color: var(--white);
 }
 
 /* Questions row */
