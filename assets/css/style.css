@@ -732,61 +732,87 @@ blockquote cite {
 /* ── NO WAY TO RUN A CITY — annotated document engine ── */
 .nwtrc-layout {
   display: grid;
-  grid-template-columns: 220px 1fr 260px;
-  gap: 2rem;
-  max-width: 1200px;
+  grid-template-columns: 1fr 320px;
+  gap: 2.5rem;
+  max-width: 1100px;
   margin: 0 auto;
   align-items: start;
 }
-.nwtrc-sidebar {
+
+/* Right panel */
+.nwtrc-panel {
   position: sticky;
   top: 72px;
-  font-size: 0.85rem;
+  background: var(--white);
+  border: 1px solid var(--gray-mid);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
 }
-.nwtrc-sidebar h4 {
-  font-size: 0.7rem;
+
+.nwtrc-card {
+  display: none;
+  padding: 1.5rem;
+  animation: nwtrc-fade 0.3s ease;
+}
+.nwtrc-card.active { display: block; }
+
+@keyframes nwtrc-fade {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.nwtrc-annotation {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--navy);
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--gray-mid);
+  margin-bottom: 1.25rem;
+}
+
+.nwtrc-meta-section { margin-bottom: 1rem; }
+.nwtrc-meta-label {
+  font-size: 0.68rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--text-muted);
-  margin-bottom: 0.5rem;
-  margin-top: 1.25rem;
+  margin-bottom: 0.4rem;
+  font-family: var(--font-sans);
 }
-.nwtrc-sidebar h4:first-child { margin-top: 0; }
-.nwtrc-questions {
+.nwtrc-meta-items {
   list-style: none;
   padding: 0;
-  margin-bottom: 0.5rem;
-}
-.nwtrc-questions li {
-  padding: 0.35rem 0.5rem;
-  border-radius: 3px;
-  color: var(--text-muted);
-  transition: all 0.3s;
-  line-height: 1.3;
+  margin: 0;
   font-size: 0.82rem;
-  border-left: 3px solid transparent;
+  line-height: 1.5;
 }
-.nwtrc-questions li.active {
-  color: var(--navy);
-  font-weight: 600;
-  background: var(--gold-light);
-  border-left-color: var(--gold);
-}
-.nwtrc-frame-items {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 0.25rem;
-}
-.nwtrc-frame-items li {
+.nwtrc-meta-items li {
   padding: 0.2rem 0;
-  line-height: 1.4;
+  color: var(--text);
   border-bottom: 1px solid var(--gray-mid);
-  font-size: 0.8rem;
 }
-.nwtrc-frame-items.inside li { color: var(--navy); }
-.nwtrc-frame-items.outside li { color: var(--text-muted); font-style: italic; }
+.nwtrc-meta-items li:last-child { border-bottom: none; }
+.nwtrc-meta-items.outside li { color: var(--text-muted); font-style: italic; }
 
-/* document container */
+.nwtrc-questions-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+.nwtrc-q-chip {
+  font-size: 0.75rem;
+  background: var(--gold-light);
+  color: var(--navy);
+  border: 1px solid var(--gold);
+  border-radius: 20px;
+  padding: 0.2rem 0.6rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+}
+
+/* Document styles */
 .doc-container {
   background: #faf9f5;
   border: 1px solid #ddd;
@@ -794,57 +820,71 @@ blockquote cite {
   padding: 2.5rem 3rem;
   font-family: var(--font-serif);
   font-size: 0.975rem;
-  line-height: 1.75;
+  line-height: 1.8;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
+
 .doc-meta {
   font-family: var(--font-sans);
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
   border-bottom: 1px solid #ddd;
   padding-bottom: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 .doc-meta div { margin-bottom: 0.2rem; }
 .doc-meta strong { color: var(--text); }
-.doc-passage {
-  display: block;
-  transition: background 0.4s;
-  border-radius: 2px;
-  padding: 0.25rem 0.4rem;
-  margin: 0 -0.4rem 0.75rem;
-}
-.doc-passage.active { background: rgba(240, 200, 60, 0.25); }
-.doc-subhead { font-weight: bold; margin-top: 0.25rem; }
-.doc-title {
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 0.25rem;
-  font-size: 1rem;
-}
-.doc-salutation { margin-bottom: 0.25rem; }
-.doc-closing { margin-top: 0.5rem; }
-.doc-p { margin-bottom: 0.75rem; }
 
-/* right-margin annotations */
-.nwtrc-annotations {
-  position: relative;
+/* Deconstructed subject block */
+.doc-subject-stack {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
 }
-.annotation {
-  position: sticky;
-  top: 80px;
-  display: none;
-  font-family: var(--font-serif);
-  font-size: 0.85rem;
-  line-height: 1.55;
-  color: #4a3800;
-  background: rgba(240,200,60,0.15);
-  border-left: 3px solid var(--gold);
-  padding: 0.75rem 1rem;
-  border-radius: 0 3px 3px 0;
+.doc-subject-label {
+  font-weight: bold;
+  color: var(--text);
   margin-bottom: 0.5rem;
 }
-.annotation.active { display: block; }
+.doc-subject-line {
+  display: block;
+  padding: 0.35rem 0.5rem;
+  margin: 0.2rem 0;
+  border-radius: 3px;
+  color: var(--text-muted);
+  transition: background 0.3s;
+  cursor: default;
+  line-height: 1.5;
+}
+.doc-subject-line.active { background: rgba(240, 200, 40, 0.12); }
+.doc-subject-prefix { color: var(--text-muted); }
+.doc-subject-rest { color: var(--text-muted); }
+
+/* Phrase-level highlights */
+.doc-phrase {
+  background: transparent;
+  transition: background 0.35s, color 0.35s;
+  border-radius: 2px;
+  padding: 0 2px;
+}
+.doc-phrase.active {
+  background: rgba(240, 200, 40, 0.45);
+  color: var(--navy);
+}
+
+.doc-p { margin-bottom: 1rem; max-width: none; }
+.doc-subhead { font-weight: bold; margin: 1.25rem 0 0.5rem; }
+.doc-salutation { margin-bottom: 1rem; }
+.doc-closing { margin-top: 1.5rem; line-height: 2; }
+.doc-title {
+  font-size: 1.05rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.25rem;
+  line-height: 1.4;
+}
 
 /* unanswered questions */
 .unanswered-list {
@@ -855,13 +895,9 @@ blockquote cite {
 }
 .unanswered-list li { margin-bottom: 0.25rem; }
 
-@media (max-width: 960px) {
-  .nwtrc-layout { grid-template-columns: 180px 1fr; }
-  .nwtrc-annotations { display: none; }
-}
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .nwtrc-layout { grid-template-columns: 1fr; }
-  .nwtrc-sidebar { position: static; border-bottom: 1px solid var(--gray-mid); padding-bottom: 1rem; margin-bottom: 1.5rem; }
+  .nwtrc-panel { position: static; margin-top: 1.5rem; }
   .doc-container { padding: 1.5rem; }
 }
 

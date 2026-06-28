@@ -72,60 +72,26 @@
 
   // ── Annotated Document Engine ──
   (function() {
-    var passages = document.querySelectorAll('.doc-passage[data-passage]');
-    if (!passages.length) return;
+    var phrases = document.querySelectorAll('.doc-phrase[data-passage]');
+    if (!phrases.length) return;
 
-    var questions = document.querySelectorAll('.nwtrc-questions li[data-passages]');
-    var insideList = document.querySelector('.nwtrc-frame-items.inside');
-    var outsideList = document.querySelector('.nwtrc-frame-items.outside');
-    var annotations = document.querySelectorAll('.annotation[data-passage]');
-
-    var frameData = {
-      '1': {
-        inside: ['Affordable housing is at risk', 'A vote is tomorrow', 'Urgency'],
-        outside: ['What the alternative proposal funds', 'The full range of options under Measure U1']
-      },
-      '2': {
-        inside: ["The councilmembers' proposal removes small-sites funding", "Mayor's proposal supports Small Sites"],
-        outside: ['What the alternative proposal funds instead', 'What tradeoffs the alternative weighed']
-      },
-      '3': {
-        inside: ['Voter mandate for Measure U1', 'HAC recommendation of $5M for small sites', "Mayor's allocation"],
-        outside: ["Other eligible uses within Measure U1's scope", 'Relative cost-effectiveness of each strategy']
-      },
-      '4': {
-        inside: ['Tenants in at-risk buildings', 'Displacement prevention', 'One highlighted project'],
-        outside: ['Households that new production might house', 'Cost per household helped', 'Regional housing context']
-      },
-      '5': {
-        inside: ['Tax funds should go to intended purposes', 'Accountability to voters'],
-        outside: ['Whether Small Sites is the highest and best use within those purposes', "Other eligible strategies that also serve Measure U1's intent"]
-      },
-      '6': {
-        inside: ["Supporters of the Mayor's proposal", "Action before the next day's vote"],
-        outside: ["The alternative proposal's reasoning", 'Whether residents had earlier opportunity to compare both proposals']
-      },
-      '7': {
-        inside: ['Named councilmembers on each side'],
-        outside: ['The substantive arguments made by councilmembers who supported the alternative proposal']
-      }
-    };
-
-    function setItems(el, items) {
-      if (!el) return;
-      el.innerHTML = items.map(function(t) { return '<li>' + t + '</li>'; }).join('');
-    }
+    var cards = document.querySelectorAll('.nwtrc-card[data-passage]');
 
     function activate(id) {
-      passages.forEach(function(p) { p.classList.toggle('active', p.dataset.passage === id); });
-      annotations.forEach(function(a) { a.classList.toggle('active', a.dataset.passage === id); });
-      questions.forEach(function(q) {
-        var ids = (q.dataset.passages || '').split(',');
-        q.classList.toggle('active', ids.indexOf(id) !== -1);
+      phrases.forEach(function(p) {
+        p.classList.toggle('active', p.dataset.passage === id);
       });
-      var f = frameData[id] || { inside: [], outside: [] };
-      setItems(insideList, f.inside);
-      setItems(outsideList, f.outside);
+      document.querySelectorAll('.doc-subject-line[data-subject-line]').forEach(function(line) {
+        line.classList.toggle('active', line.dataset.subjectLine === id);
+      });
+      cards.forEach(function(c) {
+        var shouldBeActive = c.dataset.passage === id;
+        if (shouldBeActive && !c.classList.contains('active')) {
+          c.classList.add('active');
+        } else if (!shouldBeActive && c.classList.contains('active')) {
+          c.classList.remove('active');
+        }
+      });
     }
 
     if ('IntersectionObserver' in window) {
@@ -135,11 +101,11 @@
             activate(entry.target.dataset.passage);
           }
         });
-      }, { threshold: 0.3, rootMargin: '-15% 0px -45% 0px' });
+      }, { threshold: 0.6, rootMargin: '-20% 0px -30% 0px' });
 
-      passages.forEach(function(p) { docObserver.observe(p); });
+      phrases.forEach(function(p) { docObserver.observe(p); });
     }
-    if (passages.length) activate(passages[0].dataset.passage);
+    if (phrases.length) activate(phrases[0].dataset.passage);
   })();
 
 })();
