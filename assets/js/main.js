@@ -75,7 +75,7 @@
     var section = document.getElementById('nwtrc-section');
     if (!section) return;
 
-    var TOTAL   = 22;
+    var TOTAL   = 23;
     var current = 1;
 
     var phrases = document.querySelectorAll('.doc-phrase[data-passage]');
