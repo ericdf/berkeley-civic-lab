@@ -825,7 +825,7 @@ blockquote cite {
   padding: 0.65rem 0.75rem;
 }
 .nwtrc-frame-panel.inside {
-  background: var(--gold);
+  background: #a06800;
 }
 .nwtrc-frame-panel.outside {
   background: var(--navy);
