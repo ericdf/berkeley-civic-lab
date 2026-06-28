@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Hidden Cost of Public Programs — Berkeley Budget Lab</title>
+  <meta name="description" content="Every public program has hidden costs. Disciplined budgeting surfaces all of them — build cost, total cost of ownership, and organizational capacity.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .hc-hero {
+      background: var(--navy);
+      padding: 64px 1.5rem 56px;
+      text-align: center;
+    }
+    .hc-hero-label {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.85;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+    .hc-hero h1 {
+      color: var(--gold);
+      margin-bottom: 1rem;
+      max-width: 18ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hc-hero p {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.1rem;
+      max-width: 56ch;
+      margin: 0 auto;
+    }
+
+    /* Iceberg section */
+    .hc-iceberg {
+      background: var(--white);
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    .hc-iceberg img {
+      max-width: 520px;
+      width: 100%;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hc-iceberg-caption {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 1rem;
+      font-style: italic;
+    }
+
+    /* Three questions */
+    .hc-questions {
+      background: var(--navy);
+      padding: 4rem 1.5rem;
+    }
+    .hc-questions-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .hc-questions h2 {
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    .hc-questions-sub {
+      text-align: center;
+      color: rgba(255,255,255,0.65);
+      font-size: 0.95rem;
+      margin-bottom: 2.5rem;
+      font-family: var(--font-sans);
+    }
+    .hc-q-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+    @media (max-width: 600px) {
+      .hc-q-grid { grid-template-columns: 1fr; }
+    }
+    .hc-q-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.25rem;
+    }
+    .hc-q-num {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .hc-q-card h3 {
+      color: var(--white);
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+    }
+    .hc-q-card p {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.875rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Capacity section */
+    .hc-capacity {
+      background: var(--gray-bg);
+      padding: 4rem 1.5rem;
+    }
+    .hc-capacity-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .hc-capacity h2 {
+      margin-bottom: 0.75rem;
+    }
+    .hc-capacity-lede {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 62ch;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+    .hc-capacity-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+    @media (max-width: 560px) {
+      .hc-capacity-grid { grid-template-columns: 1fr; }
+    }
+    .hc-capacity-item {
+      background: var(--white);
+      border: 1px solid var(--gray-mid);
+      border-radius: var(--radius);
+      padding: 0.75rem 1rem;
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      color: var(--navy);
+      font-weight: 500;
+    }
+    .hc-capacity-note {
+      margin-top: 1.5rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--navy);
+      color: rgba(255,255,255,0.85);
+      border-radius: var(--radius);
+      font-size: 0.975rem;
+      line-height: 1.7;
+    }
+    .hc-capacity-note strong { color: var(--gold); }
+
+    /* Case study */
+    .hc-case {
+      background: var(--white);
+      padding: 4rem 1.5rem;
+    }
+    .hc-case-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .hc-case h2 { margin-bottom: 0.75rem; }
+    .hc-case-lede {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 62ch;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+    .hc-disclaimer {
+      background: var(--gold-light);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1rem 1.25rem;
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .hc-q-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .hc-q-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.55;
+    }
+    .hc-q-list li::before {
+      content: "?";
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 0.75rem;
+      color: var(--white);
+      background: var(--navy);
+      border-radius: 50%;
+      width: 1.35rem;
+      height: 1.35rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    /* Rule */
+    .hc-rule {
+      background: var(--navy);
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    .hc-rule-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .hc-rule h2 { color: var(--gold); margin-bottom: 1rem; }
+    .hc-rule p { color: rgba(255,255,255,0.75); font-size: 1rem; line-height: 1.7; margin-bottom: 2rem; }
+    .hc-rule-checklist {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      text-align: left;
+      margin: 0 auto 2.5rem;
+      max-width: 480px;
+    }
+    .hc-rule-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      padding: 0.9rem 1.1rem;
+    }
+    .hc-rule-num {
+      font-family: var(--font-sans);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--gold);
+      flex-shrink: 0;
+      width: 1.5rem;
+      text-align: center;
+    }
+    .hc-rule-text {
+      color: var(--white);
+      font-size: 0.95rem;
+      font-family: var(--font-sans);
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav" aria-label="Site navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">Berkeley Budget Lab</a>
+    <button class="nav-hamburger" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="framework.html">Framework</a></li>
+      <li><a href="endorse.html">Endorse</a></li>
+      <li><a href="endorsers.html">Endorsers</a></li>
+      <li><a href="toolbox.html">Toolbox</a></li>
+      <li><a href="case-studies.html">Failure Modes</a></li>
+      <li><a href="no-way.html">No Way to Run a City</a></li>
+      <li><a href="hidden-cost.html">Hidden Costs</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#downloads">Downloads</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+  <!-- Hero -->
+  <header class="hc-hero">
+    <span class="hc-hero-label">Hidden Costs</span>
+    <h1>The Hidden Cost of Public Programs</h1>
+    <p>Disciplined budgeting surfaces all costs — not only what it takes to build something, but what it takes to own it and deliver it well.</p>
+  </header>
+
+  <!-- Iceberg graphic -->
+  <section class="hc-iceberg">
+    <img src="assets/img/iceberg.png" alt="An iceberg diagram showing Program Services visible above water and twelve hidden cost categories submerged below: staffing, benefits, pensions, facilities, equipment, IT and software, maintenance, replacement cycles, consumables, and administration.">
+    <p class="hc-iceberg-caption">Most public discussion stops at the visible tip. Disciplined budgeting requires naming everything below the waterline.</p>
+  </section>
+
+  <!-- Three questions -->
+  <section class="hc-questions">
+    <div class="hc-questions-inner">
+      <h2>Three Questions Most Budgets Don't Ask</h2>
+      <p class="hc-questions-sub">Public discussion usually stops at Question 1.</p>
+      <div class="hc-q-grid">
+        <div class="hc-q-card fade-in">
+          <span class="hc-q-num">Question 1</span>
+          <h3>What does it cost to build?</h3>
+          <p>Capital appropriations, construction, design, and one-time setup. This is the number that appears in budget headlines.</p>
+        </div>
+        <div class="hc-q-card fade-in">
+          <span class="hc-q-num">Question 2</span>
+          <h3>What does it cost to own?</h3>
+          <p>Staffing, benefits, pensions, facilities, maintenance, replacement cycles, IT, and administration — year after year, long after the ribbon cutting.</p>
+        </div>
+        <div class="hc-q-card fade-in">
+          <span class="hc-q-num">Question 3</span>
+          <h3>What does it cost to deliver?</h3>
+          <p>The organizational capacity consumed: project management, legal, procurement, finance, HR, and executive attention — all finite and competed over.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Organizational capacity -->
+  <section class="hc-capacity">
+    <div class="hc-capacity-inner">
+      <h2 class="fade-in">Money Is Not the Only Scarce Resource</h2>
+      <p class="hc-capacity-lede fade-in">Every major initiative also consumes organizational capacity — the time, attention, and expertise of the people responsible for making it work. That capacity is finite and competed over by every project the city pursues simultaneously.</p>
+      <div class="hc-capacity-grid fade-in">
+        <div class="hc-capacity-item">Project Management</div>
+        <div class="hc-capacity-item">Public Works</div>
+        <div class="hc-capacity-item">Engineering</div>
+        <div class="hc-capacity-item">Finance</div>
+        <div class="hc-capacity-item">HR &amp; Procurement</div>
+        <div class="hc-capacity-item">Legal</div>
+        <div class="hc-capacity-item">Executive Oversight</div>
+        <div class="hc-capacity-item">Community Engagement</div>
+        <div class="hc-capacity-item">Council Attention</div>
+        <div class="hc-capacity-item">Consultant Support</div>
+      </div>
+      <div class="hc-capacity-note fade-in">
+        <strong>When departments are shrinking</strong> — through layoffs, vacancies, or budget reductions — every new initiative competes for the same implementation capacity that existing work already depends on. A city cannot add commitments without acknowledging what existing work is delayed or deprioritized as a result.
+      </div>
+    </div>
+  </section>
+
+  <!-- Case study -->
+  <section class="hc-case">
+    <div class="hc-case-inner">
+      <h2 class="fade-in">Case Study: The African American Holistic Resource Center</h2>
+      <p class="hc-case-lede fade-in">The AAHRC is used here not to argue for or against the project, but to demonstrate how difficult it is for residents to answer basic ownership questions from public documents alone.</p>
+
+      <div class="hc-disclaimer fade-in">
+        <strong>Editorial principle:</strong> This analysis does not argue against the AAHRC or any specific program. It argues that disciplined budgeting requires surfacing all costs — not only dollars, but also the long-term commitments and organizational capacity consumed by public decisions.
+      </div>
+
+      <h3 class="fade-in" style="margin-bottom:1rem;">Questions residents cannot answer from public documents</h3>
+      <ul class="hc-q-list fade-in">
+        <li>How many City employees will ultimately support this center?</li>
+        <li>Which departments are currently involved in developing it?</li>
+        <li>How many staff-hours are already invested?</li>
+        <li>What recurring General Fund support will be required once it opens?</li>
+        <li>What benefits and pension obligations accompany City staffing of the center?</li>
+        <li>Which existing work is being delayed because staff are assigned to this project?</li>
+      </ul>
+
+      <div class="hc-capacity-note fade-in" style="margin-top:2rem;">
+        If the answers to these questions cannot be assembled from public documents, that itself illustrates the framework. Residents cannot evaluate a project they cannot see the full cost of.
+      </div>
+    </div>
+  </section>
+
+  <!-- The rule -->
+  <section class="hc-rule">
+    <div class="hc-rule-inner">
+      <h2>The Reusable Rule</h2>
+      <p>Every significant public initiative should disclose three things before a funding decision is made. One standard, applied to every project equally.</p>
+      <div class="hc-rule-checklist">
+        <div class="hc-rule-item">
+          <span class="hc-rule-num">1</span>
+          <span class="hc-rule-text">Build Cost — the one-time capital and setup expenditure</span>
+        </div>
+        <div class="hc-rule-item">
+          <span class="hc-rule-num">2</span>
+          <span class="hc-rule-text">Total Cost of Ownership — recurring costs across the program's life</span>
+        </div>
+        <div class="hc-rule-item">
+          <span class="hc-rule-num">3</span>
+          <span class="hc-rule-text">Organizational Capacity Required — the staff time, expertise, and attention the project will consume</span>
+        </div>
+      </div>
+      <p>Only when all three are disclosed can residents and elected officials compare competing priorities fairly.</p>
+      <a href="framework.html" class="btn btn-primary">Read the Full Framework →</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Berkeley Budget Lab</div>
+      <div class="footer-version">Berkeley Budget Discipline Framework v1.1</div>
+      <p class="footer-disclaimer">This framework promotes a disciplined decision-making process for municipal budgeting. It does not advocate predetermined budget outcomes.</p>
+    </div>
+    <div class="footer-downloads">
+      <h4>Downloads</h4>
+      <a href="assets/downloads/bbdf-one-page.pdf" download>One-Page Framework</a>
+      <a href="assets/img/poster.png" target="_blank">Poster (PNG)</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
