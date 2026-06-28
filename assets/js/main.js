@@ -101,7 +101,7 @@
             activate(entry.target.dataset.passage);
           }
         });
-      }, { threshold: 0.6, rootMargin: '-20% 0px -30% 0px' });
+      }, { threshold: 0.5, rootMargin: '-10% 0px -20% 0px' });
 
       phrases.forEach(function(p) { docObserver.observe(p); });
     }
