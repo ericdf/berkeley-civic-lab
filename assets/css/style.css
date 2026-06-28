@@ -810,37 +810,80 @@ blockquote cite {
   margin-bottom: 1.25rem;
 }
 
+/* Frame comparison panels */
+.nwtrc-frame-panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--gray-mid);
+}
+.nwtrc-frame-panel {
+  border-radius: var(--radius);
+  padding: 0.65rem 0.75rem;
+}
+.nwtrc-frame-panel.inside {
+  background: var(--navy);
+}
+.nwtrc-frame-panel.outside {
+  background: var(--gray-bg);
+  border: 1px dashed #bbb;
+}
+.nwtrc-frame-label {
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.nwtrc-frame-panel.inside  .nwtrc-frame-label { color: rgba(255,255,255,0.55); }
+.nwtrc-frame-panel.outside .nwtrc-frame-label { color: var(--text-muted); }
+.nwtrc-frame-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+.nwtrc-frame-chip {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  border-radius: 20px;
+  padding: 0.2rem 0.55rem;
+  line-height: 1.4;
+  display: inline-block;
+}
+.nwtrc-frame-panel.inside  .nwtrc-frame-chip {
+  background: rgba(255,255,255,0.15);
+  color: var(--white);
+}
+.nwtrc-frame-panel.outside .nwtrc-frame-chip {
+  background: var(--white);
+  color: var(--text-muted);
+  border: 1px dashed #bbb;
+}
+
+/* Questions row */
 .nwtrc-meta-section { margin-bottom: 0.75rem; }
 .nwtrc-meta-label {
-  font-size: 0.68rem;
+  font-size: 0.62rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--text-muted);
   margin-bottom: 0.4rem;
   font-family: var(--font-sans);
+  font-weight: 700;
+  display: block;
 }
-.nwtrc-meta-items {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 0.82rem;
-  line-height: 1.5;
-}
-.nwtrc-meta-items li {
-  padding: 0.2rem 0;
-  color: var(--text);
-  border-bottom: 1px solid var(--gray-mid);
-}
-.nwtrc-meta-items li:last-child { border-bottom: none; }
-.nwtrc-meta-items.outside li { color: var(--text-muted); font-style: italic; }
-
 .nwtrc-questions-row {
   display: flex;
   flex-wrap: wrap;
   gap: 0.3rem;
 }
 .nwtrc-q-chip {
-  font-size: 0.75rem;
+  font-size: 0.73rem;
   background: var(--gold-light);
   color: var(--navy);
   border: 1px solid var(--gold);
