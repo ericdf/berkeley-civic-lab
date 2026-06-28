@@ -58,11 +58,12 @@
   </section>
 
   <!-- ── Annotated Document ── -->
-  <section class="scene bg-gray" style="padding-top:2.5rem;padding-bottom:3rem;">
-    <div class="nwtrc-layout">
+  <div class="nwtrc-scroll-section" id="nwtrc-scroll">
+    <div class="nwtrc-sticky-view">
+      <div class="nwtrc-two-col">
 
-      <!-- Center: Document -->
-      <div>
+      <!-- Left: Document -->
+      <div class="nwtrc-doc-col">
         <div class="doc-container">
 
           <div class="doc-meta">
@@ -71,18 +72,9 @@
             <div><strong>Meeting:</strong> Tuesday, June 23, 2026, 6:00 pm — final budget vote</div>
           </div>
 
-          <!-- Deconstructed subject: three stacked lines, each highlighting a different phrase -->
-          <div class="doc-subject-stack">
-            <div class="doc-subject-label">Subject (three readings):</div>
-            <div class="doc-subject-line" data-subject-line="1">
-              <span class="doc-phrase" data-passage="1">Urgent Budget Update</span><span class="doc-subject-rest"> from Mayor Ishii: Affordable Housing at Risk</span>
-            </div>
-            <div class="doc-subject-line" data-subject-line="2">
-              <span class="doc-subject-prefix">Urgent Budget Update </span><span class="doc-phrase" data-passage="2">from Mayor Ishii</span><span class="doc-subject-rest">: Affordable Housing at Risk</span>
-            </div>
-            <div class="doc-subject-line" data-subject-line="3">
-              <span class="doc-subject-prefix">Urgent Budget Update from Mayor Ishii: </span><span class="doc-phrase" data-passage="3">Affordable Housing at Risk</span>
-            </div>
+          <div class="doc-subject-line-single">
+            <strong>Subject:</strong>
+            <span class="doc-phrase" data-passage="1">Urgent Budget Update</span><span class="doc-phrase" data-passage="2"> from Mayor Ishii</span><span class="doc-phrase" data-passage="3">: Affordable Housing at Risk</span>
           </div>
 
           <div class="doc-title">Statement from Mayor Ishii Regarding Affordable Housing Funding<br>and the 2027–2028 Budget Proposals</div>
@@ -114,8 +106,10 @@
         </div>
       </div>
 
-      <!-- Right: Panel -->
-      <aside class="nwtrc-panel" aria-label="Annotation and framework questions">
+      <!-- Right: Annotation panel -->
+      <aside class="nwtrc-panel-col" aria-label="Annotation and framework questions">
+        <div class="nwtrc-panel">
+          <div class="nwtrc-progress-bar"><div class="nwtrc-progress-fill" id="nwtrc-progress"></div></div>
 
         <div class="nwtrc-card active" data-passage="1">
           <div class="nwtrc-annotation">"Urgent" changes the reader's job. Instead of asking residents to compare alternatives, it asks them to act quickly. That is exactly when budget decisions need more discipline, not less.</div>
@@ -541,9 +535,12 @@
           </div>
         </div>
 
-      </aside>
-    </div><!-- /.nwtrc-layout -->
-  </section>
+        <div class="nwtrc-scroll-hint">Scroll to advance the analysis ↓</div>
+        </div><!-- /.nwtrc-panel -->
+      </aside><!-- /.nwtrc-panel-col -->
+    </div><!-- /.nwtrc-two-col -->
+    </div><!-- /.nwtrc-sticky-view -->
+  </div><!-- /.nwtrc-scroll-section -->
 
   <!-- ── Questions Still Unanswered ── -->
   <section class="scene bg-white" aria-labelledby="unanswered-heading">
