@@ -839,7 +839,7 @@ blockquote cite {
   margin-bottom: 0.5rem;
   display: block;
 }
-.nwtrc-frame-panel.inside  .nwtrc-frame-label { color: rgba(26,39,68,0.6); }
+.nwtrc-frame-panel.inside  .nwtrc-frame-label { color: rgba(255,255,255,0.7); }
 .nwtrc-frame-panel.outside .nwtrc-frame-label { color: rgba(255,255,255,0.55); }
 .nwtrc-frame-chips {
   display: flex;
@@ -856,8 +856,8 @@ blockquote cite {
   display: inline-block;
 }
 .nwtrc-frame-panel.inside  .nwtrc-frame-chip {
-  background: rgba(26,39,68,0.12);
-  color: var(--navy);
+  background: rgba(255,255,255,0.2);
+  color: var(--white);
 }
 .nwtrc-frame-panel.outside .nwtrc-frame-chip {
   background: rgba(255,255,255,0.1);
