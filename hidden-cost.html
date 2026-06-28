@@ -238,6 +238,79 @@
       margin-top: 0.1rem;
     }
 
+    /* Side-by-side comparison */
+    .hc-compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    @media (max-width: 600px) {
+      .hc-compare { grid-template-columns: 1fr; }
+    }
+    .hc-compare-col {
+      border-radius: var(--radius);
+      padding: 1.25rem 1.25rem 1.5rem;
+    }
+    .hc-compare-col.surfaced {
+      background: #f0f7f1;
+      border: 1px solid #7eba8a;
+    }
+    .hc-compare-col.not-surfaced {
+      background: #fdf3f3;
+      border: 1px solid #d89090;
+    }
+    .hc-compare-header {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid currentColor;
+    }
+    .hc-compare-col.surfaced .hc-compare-header { color: #2e6b3e; }
+    .hc-compare-col.not-surfaced .hc-compare-header { color: #a03030; }
+    .hc-compare-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+    .hc-compare-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: var(--text);
+    }
+    .hc-check {
+      font-size: 0.95rem;
+      color: #2e6b3e;
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+    }
+    .hc-cross {
+      font-size: 0.95rem;
+      color: #a03030;
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+    }
+    .hc-estimate-note {
+      background: var(--gold-light);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1rem 1.25rem;
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.65;
+    }
+
     /* Rule */
     .hc-rule {
       background: var(--navy);
@@ -348,47 +421,42 @@
   <section class="hc-case">
     <div class="hc-case-inner">
       <h2 class="fade-in">Case Study: The African American Holistic Resource Center</h2>
-      <p class="hc-case-lede fade-in">The AAHRC is used here not to argue for or against the project, but to show how hard it can be for residents to see the full cost of a public program.</p>
+      <p class="hc-case-lede fade-in">The AAHRC has been under development for roughly seven years and is approximately one year from completion. It is used here not to argue for or against the project, but to show how hard it can be for residents to see the full cost of a public program — even one that is nearly finished.</p>
 
       <div class="hc-disclaimer fade-in">
-        <strong>Editorial principle:</strong> This analysis does not argue against the AAHRC or any specific program. It argues that disciplined budgeting requires surfacing both price tags — not only what it costs to start, but what it costs to own and sustain over time. That standard should apply to every program equally.
+        <strong>Editorial principle:</strong> This analysis does not argue against the AAHRC or any specific program. The recommendation here is universal: every significant public program should disclose both price tags — what it costs to start, and what it costs to own — before major funding decisions are made.
       </div>
 
-      <h3 class="fade-in" style="margin-bottom:0.5rem;">What Berkeley has clearly surfaced</h3>
-      <p class="fade-in" style="color:var(--text-muted);font-size:0.95rem;margin-bottom:1.5rem;">The capital budget, building scope, construction cost, and funding sources are documented in public records.</p>
-
-      <h3 class="fade-in" style="margin-bottom:0.5rem;">What has not been equally surfaced</h3>
-      <p class="fade-in" style="color:var(--text-muted);font-size:0.95rem;margin-bottom:1.25rem;">An earlier feasibility study estimated annual operating costs at roughly $1.5M–$2M. That estimate now likely needs updating given the expanded scope. The important point is not whether the old number is exactly right — it is that a current ownership model should be disclosed before residents are asked to judge affordability.</p>
-
-      <div class="hc-q-group fade-in">
-        <div class="hc-q-group-label">What does it cost to start?</div>
-        <ul class="hc-q-list">
-          <li>When the project scope expanded from rehabilitating an existing structure to a 6,000 square foot new construction project, were the full downstream costs — ownership, staffing, operations — re-examined and disclosed?</li>
-          <li>What other programs or priorities lost funding as a result of this project's budget?</li>
-        </ul>
+      <!-- Side-by-side comparison -->
+      <div class="hc-compare fade-in">
+        <div class="hc-compare-col surfaced">
+          <div class="hc-compare-header">What Berkeley Has Surfaced</div>
+          <ul class="hc-compare-list">
+            <li><span class="hc-check">✓</span> Original capital scope and budget</li>
+            <li><span class="hc-check">✓</span> Current capital scope and budget</li>
+            <li><span class="hc-check">✓</span> The capital budget increased substantially when the project expanded from rehabilitating an existing structure to a 6,000 square foot new construction</li>
+            <li><span class="hc-check">✓</span> A 2019 feasibility study estimated annual operating costs at approximately $1.5M–$2.0M and identified major operating cost categories</li>
+            <li><span class="hc-check">✓</span> Funding was redirected from other projects to close the capital funding gap</li>
+          </ul>
+        </div>
+        <div class="hc-compare-col not-surfaced">
+          <div class="hc-compare-header">What Has Not Been Equally Surfaced</div>
+          <ul class="hc-compare-list">
+            <li><span class="hc-cross">✗</span> Current planned operating budget</li>
+            <li><span class="hc-cross">✗</span> Current planned staffing model</li>
+            <li><span class="hc-cross">✗</span> Current benefits and pension obligations</li>
+            <li><span class="hc-cross">✗</span> Current facility lifecycle and maintenance costs</li>
+            <li><span class="hc-cross">✗</span> Long-term General Fund operating commitment</li>
+          </ul>
+        </div>
       </div>
 
-      <div class="hc-q-group fade-in">
-        <div class="hc-q-group-label">What does it cost to own?</div>
-        <ul class="hc-q-list">
-          <li>What is the current annual operating cost estimate — and has it been updated since the scope changed?</li>
-          <li>How many City employees will be required to operate the center, and what are their benefits and pension obligations?</li>
-          <li>What are the ongoing facility costs — utilities, maintenance, trash collection, building systems, insurance?</li>
-          <li>What is the long-term General Fund commitment once any grants or one-time funds expire?</li>
-          <li>Can Berkeley afford to own and operate this for the next 30 years?</li>
-        </ul>
+      <div class="hc-estimate-note fade-in">
+        <strong>On the 2019 estimate:</strong> That feasibility study was an early planning estimate, produced before the project scope changed significantly. It is likely outdated. But it demonstrates an important point: even in 2019, planners recognized that the center would carry significant recurring operating costs. The current public materials reviewed do not clearly surface a planned operating model that reflects the project as it stands today — approximately one year from opening.
       </div>
 
-      <div class="hc-q-group fade-in">
-        <div class="hc-q-group-label">What does it cost to deliver?</div>
-        <ul class="hc-q-list">
-          <li>Which departments are currently involved in developing it, and how many staff-hours are already invested?</li>
-          <li>Which existing work is being delayed because staff are assigned to this project?</li>
-        </ul>
-      </div>
-
-      <div class="hc-capacity-note fade-in" style="margin-top:2rem;">
-        If residents can see the capital budget but not the ownership model, they are seeing only one price tag.
+      <div class="hc-capacity-note fade-in" style="margin-top:1.5rem;">
+        If residents can see the capital budget but not the planned ownership model, they are seeing only one price tag.
       </div>
     </div>
   </section>
@@ -396,16 +464,28 @@
   <!-- The rule -->
   <section class="hc-rule">
     <div class="hc-rule-inner">
-      <h2>No Major Program Should Move Forward on One Price Tag Alone</h2>
-      <p>Before Berkeley starts, expands, or continues a significant program, residents should be able to see both price tags: what it costs to start, and what it costs to own.</p>
+      <h2>Every Major Program Should Have an Ownership Statement</h2>
+      <p>Before Berkeley starts, expands, or continues a significant program, residents should be able to see both price tags. An Ownership Statement makes the second price tag visible.</p>
       <div class="hc-rule-checklist">
         <div class="hc-rule-item">
-          <span class="hc-rule-num">1</span>
-          <span class="hc-rule-text">The cost to start — capital, construction, design, and one-time launch</span>
+          <span class="hc-rule-num">✓</span>
+          <span class="hc-rule-text">Planned annual operating budget</span>
         </div>
         <div class="hc-rule-item">
-          <span class="hc-rule-num">2</span>
-          <span class="hc-rule-text">The cost to own — staffing, benefits, pensions, facilities, utilities, maintenance, IT, insurance, and administration, year after year</span>
+          <span class="hc-rule-num">✓</span>
+          <span class="hc-rule-text">Planned staffing model</span>
+        </div>
+        <div class="hc-rule-item">
+          <span class="hc-rule-num">✓</span>
+          <span class="hc-rule-text">Benefits and pension obligations</span>
+        </div>
+        <div class="hc-rule-item">
+          <span class="hc-rule-num">✓</span>
+          <span class="hc-rule-text">Major facility lifecycle costs</span>
+        </div>
+        <div class="hc-rule-item">
+          <span class="hc-rule-num">✓</span>
+          <span class="hc-rule-text">Long-term funding source after grants or one-time funds expire</span>
         </div>
       </div>
       <p>Every program comes with two price tags. Disciplined budgeting surfaces both before promises are made — not after obligations are locked in.</p>
