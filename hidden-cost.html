@@ -205,6 +205,22 @@
       color: var(--text);
       line-height: 1.55;
     }
+    .hc-q-group {
+      margin-bottom: 1.5rem;
+    }
+    .hc-q-group-label {
+      font-family: var(--font-sans);
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--white);
+      background: var(--navy);
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+      margin-bottom: 0.6rem;
+    }
     .hc-q-list li::before {
       content: "?";
       font-family: var(--font-sans);
@@ -363,17 +379,33 @@
         <strong>Editorial principle:</strong> This analysis does not argue against the AAHRC or any specific program. It argues that disciplined budgeting requires surfacing all costs — not only dollars, but also the long-term commitments and organizational capacity consumed by public decisions.
       </div>
 
-      <h3 class="fade-in" style="margin-bottom:1rem;">Questions residents cannot answer from public documents</h3>
-      <ul class="hc-q-list fade-in">
-        <li>How many City employees will ultimately support this center?</li>
-        <li>Which departments are currently involved in developing it?</li>
-        <li>How many staff-hours are already invested?</li>
-        <li>What recurring General Fund support will be required once it opens?</li>
-        <li>What benefits and pension obligations accompany City staffing of the center?</li>
-        <li>Which existing work is being delayed because staff are assigned to this project?</li>
-        <li>When the project scope expanded, what additional costs were considered and disclosed?</li>
-        <li>What other programs or priorities lost funding as a result of this project's budget?</li>
-      </ul>
+      <h3 class="fade-in" style="margin-bottom:1.25rem;">Questions residents cannot answer from public documents</h3>
+
+      <div class="hc-q-group fade-in">
+        <div class="hc-q-group-label">Build</div>
+        <ul class="hc-q-list">
+          <li>When the project scope expanded, what additional costs were considered and disclosed?</li>
+          <li>What other programs or priorities lost funding as a result of this project's budget?</li>
+        </ul>
+      </div>
+
+      <div class="hc-q-group fade-in">
+        <div class="hc-q-group-label">Own</div>
+        <ul class="hc-q-list">
+          <li>What recurring General Fund support will be required once it opens?</li>
+          <li>What benefits and pension obligations accompany City staffing of the center?</li>
+        </ul>
+      </div>
+
+      <div class="hc-q-group fade-in">
+        <div class="hc-q-group-label">Deliver</div>
+        <ul class="hc-q-list">
+          <li>How many City employees will ultimately support this center?</li>
+          <li>Which departments are currently involved in developing it?</li>
+          <li>How many staff-hours are already invested?</li>
+          <li>Which existing work is being delayed because staff are assigned to this project?</li>
+        </ul>
+      </div>
 
       <div class="hc-capacity-note fade-in" style="margin-top:2rem;">
         If the answers to these questions cannot be assembled from public documents, that itself illustrates the framework. Residents cannot evaluate a project they cannot see the full cost of.
