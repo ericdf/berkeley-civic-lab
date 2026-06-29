@@ -30,7 +30,7 @@ The objective is to build agreement around a budgeting framework before discussi
 ## Guiding Principles
 
 - Standards before examples.
-- Process before personalities.
+- Principled decision-making before political pressure.
 - Evidence before conclusions.
 - Transparency over rhetoric.
 - One standard for every public dollar.
@@ -40,6 +40,26 @@ The objective is to build agreement around a budgeting framework before discussi
 **Tone:** Judicial. Thoughtful. Non-partisan. Calm. Analytical.
 
 Never use outrage, ridicule, or "gotcha" language.
+
+---
+
+## Target Reader Personas
+
+The primary target reader is a thoughtful, compassionate, civically engaged Berkeley resident who values public services and wants government to work better. This reader may not share skepticism about particular programs, so copy should earn trust through fairness, precision, and process-oriented language.
+
+**Editorial rules:**
+- Prefer neutral governance language over ideological language.
+- Critique decision-making processes rather than beneficiaries, employees, or particular programs.
+- Use terms such as: priorities, tradeoffs, obligations, evidence, outcomes, accountability, stewardship, public value, and long-term costs.
+- Avoid unnecessary jargon and politically loaded terminology when a neutral alternative exists.
+- Preserve the central thesis: Berkeley deserves a disciplined way to decide what comes first.
+- The objective is not immediate agreement. It is to keep intellectually honest readers engaged long enough to evaluate the framework on its merits.
+
+**Preferred language:**
+- "financial support" over vague "support"
+- "ongoing obligations" or "open-ended obligations" over "permanent entitlement"
+- "principled" over "disciplined" in descriptive language (the framework name is fixed)
+- Avoid "opportunity cost" — use: "Every dollar spent here is a dollar that cannot be spent somewhere else. Choosing one priority means choosing not to fund another."
 
 ---
 
@@ -179,6 +199,45 @@ Cards: Berkeley Budget Lab · Berkeley Tax Impact Calculator · External Resourc
 Expands each of the six tests with explanation of why each matters.
 
 Concludes: This framework does not begin by naming cuts. It begins by naming standards.
+
+### Test 1 — Is This the City's Responsibility?
+
+Distinguishes three categories:
+- **Legal obligations:** debt service, pension contributions, court judgments, employee compensation required by contracts. These must be met.
+- **Core public services:** police, fire, streets, libraries, parks, basic administration. Residents have a reasonable right to expect these.
+- **Discretionary policy choices:** financial support for arts organizations, grant programs, pilot initiatives, property acquisitions beyond core operational needs. These may be worthwhile, but they are choices, not obligations.
+
+Discretionary choices face a higher burden of proof when competing for the same dollars as legal obligations and core services.
+
+### Test 2 — Is It More Important Than Competing Needs?
+
+Lead: "Every dollar spent here is a dollar that cannot be spent somewhere else. Choosing one priority means choosing not to fund another. Good budgeting makes those tradeoffs explicit."
+
+Do not use "opportunity cost."
+
+### Test 3 — Does It Work — and How Would We Know?
+
+Include: "Financial accountability and program accountability are different. Financial audits verify that money was spent as reported. They generally do not determine whether a program achieved its intended outcomes."
+
+Accountability questions:
+- What outcome was promised?
+- How will success be measured?
+- Who is accountable for reporting results?
+- What happens if the program falls short?
+
+### Test 5 — Who Else Should Be Solving or Sharing This?
+
+Regional risk paragraph: "There is a subtler risk beyond simple cost-sharing: Berkeley can end up serving a regional need with mostly local dollars. When one city builds substantially more capacity than neighboring jurisdictions, people in need may be directed there formally or informally. That does not make the investment wrong, but it does mean Berkeley should ask what regional partners are contributing, what limits exist, and whether local taxpayers are being asked to sustain a burden that extends beyond city boundaries."
+
+### Test 6 — When Should This Be Reviewed, Renewed, Redesigned, or Concluded?
+
+"Different kinds of public programs require different review cycles. A pilot should have a defined evaluation and decision point. An ongoing public service should be reviewed periodically for performance, efficiency, and continued public value. The important principle is not that every program expires automatically — it is that no program should continue indefinitely without meaningful review."
+
+Do not use "not mere inertia."
+
+### Closing blockquote
+
+"Good programs should welcome good scrutiny. Standards before examples. Principled decision-making before political pressure. Evidence before conclusions."
 
 ---
 
