@@ -10,6 +10,10 @@
 
 Static HTML/CSS/JS. No frameworks, no CDN dependencies. Deployed via GitHub Actions to GitHub Pages.
 
+## Six Questions — Keep in Sync
+
+The six framework question headings appear on multiple pages (`index.html`, `framework.html`, `endorse.html`). They must always match. The canonical list lives in `SPECIFICATION.md` under "Canonical Six Questions." **When any question heading changes, update all three pages and the spec in the same commit.**
+
 ## Target Reader Personas
 
 The primary target reader is a thoughtful, compassionate, civically engaged Berkeley resident who values public services and wants government to work better. Copy should earn trust through fairness, precision, and process-oriented language — not ideological framing.

@@ -194,6 +194,23 @@ Cards: Berkeley Budget Lab · Berkeley Tax Impact Calculator · External Resourc
 
 ---
 
+## Canonical Six Questions
+
+These are the authoritative headings for the six framework questions. **Every page that lists the questions must use exactly these headings.** When a heading changes, update all pages simultaneously.
+
+Pages that display the full list: `index.html` (cards), `framework.html` (expanded tests), `endorse.html` (summary list).
+
+| # | Heading |
+|---|---|
+| 1 | Is this something the City must do? |
+| 2 | Is it more important than competing needs? |
+| 3 | Does it work — and how would we know? |
+| 4 | Does outside funding actually reduce our burden? |
+| 5 | Who else should be solving or sharing this? |
+| 6 | When should this be reviewed, renewed, redesigned, or concluded? |
+
+---
+
 ## Framework Page (`framework.html`)
 
 Expands each of the six tests with explanation of why each matters.
