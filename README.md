@@ -12,6 +12,10 @@ A civic institute-style website promoting a disciplined, standards-based approac
 - **Toolbox** — Interactive budget tools and primary source documents
 - **Endorse** — Public endorsement form
 
+## Specification
+
+See [`SPECIFICATION.md`](SPECIFICATION.md) for the full project spec — purpose, IA, page-by-page content, failure modes catalog, and acceptance criteria. Keep it in sync with any site changes.
+
 ## Stack
 
 Static HTML/CSS/JS. No frameworks, no CDN dependencies. Deployed via GitHub Actions to GitHub Pages.
