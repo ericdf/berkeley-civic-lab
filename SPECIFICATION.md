@@ -200,14 +200,13 @@ Expands each of the six tests with explanation of why each matters.
 
 Concludes: This framework does not begin by naming cuts. It begins by naming standards.
 
-### Test 1 — Is This the City's Responsibility?
+### Test 1 — Is This Something the City Must Do?
 
-Distinguishes three categories:
-- **Legal obligations:** debt service, pension contributions, court judgments, employee compensation required by contracts. These must be met.
-- **Core public services:** police, fire, streets, libraries, parks, basic administration. Residents have a reasonable right to expect these.
-- **Discretionary policy choices:** financial support for arts organizations, grant programs, pilot initiatives, property acquisitions beyond core operational needs. These may be worthwhile, but they are choices, not obligations.
+Some needs belong squarely on City government: parks, streets, public safety, libraries, basic administration, and legal obligations. Other worthy activities may still be choices, not responsibilities. Before Berkeley funds them, the City should ask whether this is truly a public responsibility — or whether another organization, funder, or level of government should carry it.
 
 Discretionary choices face a higher burden of proof when competing for the same dollars as legal obligations and core services.
+
+Example test: If Berkeley does not fund this, is the City failing a core responsibility — or declining to subsidize something worthwhile but optional?
 
 ### Test 2 — Is It More Important Than Competing Needs?
 
